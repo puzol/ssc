@@ -154,8 +154,8 @@ body {
 .player-body {
   display: flex;
   flex-direction: column;
-  gap: 0.05rem;
-  justify-content: flex-start;
+  gap: 0.1rem;
+  justify-content: space-around;
   flex: 1 1 auto;
   min-height: 0;
 }
@@ -195,10 +195,10 @@ body {
   flex-direction: column;
   gap: 0.04rem;
   flex-shrink: 0;
+  padding: .1rem .4rem;
 }
 
 .foul {
-  padding: 0.05rem 0.04rem 0.06rem;
   background: var(--foul-bg);
   border-radius: 0.1rem;
   border: 0.01rem solid var(--edge);
