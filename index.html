@@ -3,24 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SSC</title>
+    <title>SSC — Snooker scores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,500&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="phone-container"> <!-- For Desktop View, irelevant on phone -->
+    <div class="phone-container">
+      <header class="app-brand" aria-label="App title">
+        <span class="app-brand__mark">SSC</span>
+        <span class="app-brand__tag">Snooker scores</span>
+      </header>
       <div class="player" id="player1">
         <div class="player-header">
           <div class="player-name">
             Player 1
           </div>
-          <div class="player-score">
+          <div class="player-score" aria-live="polite">
             000
           </div>
         </div>
         <div class="player-body">
           <div class="scored">
             <div class="scored-label">
-              Scored:
+              Pots
             </div>
             <div class="scored-values">
               <div class="button score-value red" data-value="1">
@@ -48,7 +58,7 @@
           </div>
           <div class="foul">
             <div class="foul-label">
-              Foul:
+              Foul <span class="foul-hint">(→ other player)</span>
             </div>
             <div class="foul-values">
               <div class="button foul-value white" data-value="4">
@@ -81,14 +91,14 @@
           <div class="player-name">
             Player 2
           </div>
-          <div class="player-score">
+          <div class="player-score" aria-live="polite">
             000
           </div>
         </div>
         <div class="player-body">
           <div class="scored">
             <div class="scored-label">
-              Scored:
+              Pots
             </div>
             <div class="scored-values">
               <div class="button score-value red" data-value="1">
@@ -116,7 +126,7 @@
           </div>
           <div class="foul">
             <div class="foul-label">
-              Foul:
+              Foul <span class="foul-hint">(→ other player)</span>
             </div>
             <div class="foul-values">
               <div class="button foul-value white" data-value="4">
