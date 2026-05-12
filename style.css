@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* normalize html */
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+
+	box-sizing: border-box;
+	font-size: 6.944vw;
+
+	@media screen and (max-width: 768px) and (orientation: portrait) {
+		-webkit-text-size-adjust: 100%;
+		text-size-adjust: 100%;
+    font-size: 25.65vw;
+  }
+
+  font-family: Arial, sans-serif;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-size: .2rem;
+}
+
+.phone-container{
+  background-color: #E4EFF2;
+  display: flex;
+  flex-direction: column;
+  padding: .1rem;
+  width: 100dvw;
+  height: 100dvh;
+}
+
+.player{
+  display: flex;
+  flex-direction: column;
+  padding: .1rem;
+  gap: .1rem;
+  flex-grow: 1;
+}
+
+.player-header{
+  display: flex;
+  justify-content: space-between;
+  gap: .2rem;
+  border-bottom: .01rem solid #000;
+}
+
+.player-name, .player-score{
+  font-size: .32rem;
+}
+
+.player-name{
+  flex-grow: 1;
+}
+
+.player-score{
+  text-align: right;
+  width: fit-content;
+}
+
+.player-body{
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.scored, .foul{
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+
+.scored-values, .foul-values{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 .4rem;
+  gap: .1rem;
+}
+
+.score-value, .foul-value{
+  width: .5rem;
+  height: .5rem;
+  border: .01rem solid #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.foul-value.white{
+  background-color: #fff;
+  color: #000;
+}
+
+.score-value.red{
+  background-color: #E62222;
+  color: #fff;
+}
+
+.score-value.yellow{
+  background-color: #FAF325;
+  color: #000;
+}
+
+.score-value.green{
+  background-color: #2DE02D;
+  color: #000;
+}
+
+.score-value.brown{
+  background-color: #E0962D;
+  color: #000;
+}
+
+.score-value.blue, .foul-value.blue{
+  background-color: #2D4BE0;
+  color: #fff;
+}
+
+.score-value.pink, .foul-value.pink{
+  background-color: #F24DC8;
+  color: #000;
+}
+
+.score-value.black, .foul-value.black{
+  background-color: #000;
+  color: #fff;
+}
+
+.undo-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: .1rem;
+}
+
+.undo-button, .redo-button{
+  background-color: #1D7FDA;
+  color: #fff;
+  border: none;
+  border-radius: .16rem;
+  padding: .16rem .5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color .3s ease;
+}
+
+.undo-button:hover{
+  background-color: #1563A9;
+}
+
+.redo-button{
+  background-color: #1C873C;
+}
+
+.redo-button:hover{
+  background-color: #19592D;
+}
